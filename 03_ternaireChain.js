@@ -11,10 +11,10 @@
  */
 
 function ternaryChain(a, b) {
-    return a = b ? "a et b sont égaux" :
+    return a == b ? "a et b sont égaux" :
            a > b ? "a est plus grand que b" : "b est plus grand que a"
 }
 
-console.log(ternaryChain(15, 15))
+console.log(ternaryChain(17, 15))
 
 module.exports = ternaryChain;
