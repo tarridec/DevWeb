@@ -11,7 +11,7 @@
  */
 
 function ternaryChain(a, b) {
-    return a == b ? "=" :
+    return a === b ? "=" :
            a > b ? ">" : "<"
 }
 

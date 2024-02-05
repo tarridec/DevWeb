@@ -9,6 +9,7 @@
  *   - Vous ne pouvez pas utiliser de variable
  * 
   */
+ 
 const arro = [1, 2, 3, 4, 5];
 
 const multiplyByTwo = (array) => array.map((i) => i * 2);
@@ -25,10 +26,9 @@ console.log(multiplyByTwo(arro));
  *   - Vous ne pouvez pas utiliser de variable (autre que l'argument de la fonction)
   */
 
-const arrêt = ['Adeline', 'Maëlys', 'Adrien', 'Klara', 'Youenn'];
-
-const filterNameStartByA = (array) => array.filter((i) => i[0] == 'A');
-console.log(multiplyByTwo(arrêt));
+//const filterNameStartByA = array => array.filter(i => i[0] === 'A');
+const filterNameStartByA = array => array.filter(i => i.startsWith('A'));
+console.log(filterNameStartByA(['Adeline', 'Maëlys', 'Adrien', 'Klara', 'Youenn']));
 
 /**
  * Utiliser la fonction .reduce sur le tableau passé en paramètre
