@@ -11,8 +11,8 @@
  */
 
 function ternaryChain(a, b) {
-    return a == b ? "a et b sont égaux" :
-           a > b ? "a est plus grand que b" : "b est plus grand que a"
+    return a == b ? "=" :
+           a > b ? ">" : "<"
 }
 
 console.log(ternaryChain(17, 15))
