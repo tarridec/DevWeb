@@ -30,6 +30,7 @@ console.log(multiplyByTwo(arro));
 const filterNameStartByA = array => array.filter(i => i.startsWith('A'));
 console.log(filterNameStartByA(['Adeline', 'Maëlys', 'Adrien', 'Klara', 'Youenn']));
 
+
 /**
  * Utiliser la fonction .reduce sur le tableau passé en paramètre
  * retourne la somme des valeurs du tableau
@@ -40,7 +41,23 @@ console.log(filterNameStartByA(['Adeline', 'Maëlys', 'Adrien', 'Klara', 'Youenn
  *   - Vous ne pouvez pas utiliser de variable (autre que l'argument de la fonction)
   */
 
-const sum = (array) => {}
+const array3 = [1, 2, 3, 4];
+const initValue = 0;
+const sum = (array) => { array3.reduce((acc, i) => acc + i, initValue,); }
+console.log(sum(array3));
+/**let array = ["a", "b", "c", "d"]
+
+let count = 0;
+for (let i = 0; i < array.length; i++) {
+  count++;
+}
+
+let responce = array.reduce((acc, i) => {
+  acc = acc + i;
+  console.log(acc, i);
+  return acc;
+}, ""); */
+
 
 /**
  * Utiliser la fonction .find sur le tableau passé en paramètre
@@ -61,7 +78,9 @@ const sum = (array) => {}
  *   - Vous ne pouvez pas utiliser de variable (autre que l'argument de la fonction)
   */
 
-const findUserById = (array, id) => {}
+const id = ['John', 'Doe', 'Foo', 'Bar'];
+const findUserById = (array, id) => { array.find((id) => id = 'Foo'); }
+console.log(findUserById(id))
 
 
 module.exports = {multiplyByTwo, filterNameStartByA, sum, findUserById};
