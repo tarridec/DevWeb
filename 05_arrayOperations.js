@@ -41,6 +41,9 @@ console.log(filterNameStartByA(['Adeline', 'Maëlys', 'Adrien', 'Klara', 'Youenn
  *   - Vous ne pouvez pas utiliser de variable (autre que l'argument de la fonction)
   */
 
+/** 
+let array = [1, 2, 3];
+
 const sum = (array) => { 
   const responce = array.reduce((acc, i) => {
     console.log(acc);
@@ -48,10 +51,17 @@ const sum = (array) => {
   }, 0);
   return responce;
 }
+console.log(sum(array)); */
+
+// OU
+
 let array = [1, 2, 3];
+
+const sum = (array) => array.reduce((acc, i) => acc + i, 0);
 console.log(sum(array));
 
-/**let array = ["a", "b", "c", "d"]
+
+/** let array = ["a", "b", "c", "d"]
 
 let count = 0;
 for (let i = 0; i < array.length; i++) {
@@ -90,6 +100,7 @@ const array4 = [
   {id: 3, name: 'Foo'},
   {id: 4, name: 'Bar'},
 ];
+
 const findUserById = (array, id) => array.find(i => i.id === id)?.name ?? null;
 console.log(findUserById(array4, 3))
 //console.log(findUserById(array4, 5))
