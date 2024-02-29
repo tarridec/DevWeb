@@ -1,4 +1,3 @@
-
 /**
  * utilisez la décomposition pour extraire la premiere et la 2e case du tableau
  * retournez les dans un nouveau tableau
@@ -10,7 +9,7 @@
  * contrainte: 
  *  - interdiction d'utiliser [0] et [1]
  *  - interdiction d'utiliser slice ou splice
- */
+*/
 
 const array1 = [1, 2, 3];
 
@@ -27,6 +26,7 @@ console.log(extractFirstTwo(array1));
 
 const array2 = [1, 2, 3];
 
+//const extractRest = ([, ...rest]) => rest;
 const extractRest = ([first, ...finTableau]) => finTableau;
 console.log(extractRest(array2));
 
@@ -46,6 +46,12 @@ console.log(extractRest(array2));
 const array3 = {name: "toto", age: 42};
 
 const extractName = ({name}) => name;
+/**
+  const extractName = (obj) => {
+     let name = obj;
+     return obj;
+  }
+ */
 console.log(extractName(array3));
 
 
@@ -63,6 +69,12 @@ console.log(extractName(array3));
 const array4 = {name: "toto", password: "1234"}
 
 const removePassword = ({password, ...finTableau}) => finTableau;
+/**
+  const removePassword = (obj) => {
+     const {password, ...rest} = obj;
+     return obj;
+  }
+*/
 console.log(removePassword(array4));
 
 

@@ -1,4 +1,3 @@
-
 /**
  * utilisez l'opérateur de chaine ?. pour accéder au nom du groupe auquel appartient l'utilisateur
  * Attention, l'utilisateur peut ne pas avoir de groupe (null)
@@ -14,8 +13,11 @@
  * 
  * doit renvoyer "admin"
  * 
- */
+*/
 
-const getGroupName = (obj) => {}
+const util = { name: "John", group: { name: "admin" } };
+
+const getGroupName = (obj) => obj.group?.name;
+console.log(getGroupName(util));
 
 module.exports = {getGroupName};
