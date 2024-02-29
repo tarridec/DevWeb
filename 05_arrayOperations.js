@@ -41,10 +41,16 @@ console.log(filterNameStartByA(['Adeline', 'Maëlys', 'Adrien', 'Klara', 'Youenn
  *   - Vous ne pouvez pas utiliser de variable (autre que l'argument de la fonction)
   */
 
-const array3 = [1, 2, 3, 4];
-const initValue = 0;
-const sum = (array) => { array3.reduce((acc, i) => acc + i, initValue,); }
-console.log(sum(array3));
+const sum = (array) => { 
+  const responce = array.reduce((acc, i) => {
+    console.log(acc);
+    return acc + i
+  }, 0);
+  return responce;
+}
+let array = [1, 2, 3];
+console.log(sum(array));
+
 /**let array = ["a", "b", "c", "d"]
 
 let count = 0;
@@ -78,9 +84,15 @@ let responce = array.reduce((acc, i) => {
  *   - Vous ne pouvez pas utiliser de variable (autre que l'argument de la fonction)
   */
 
-const id = ['John', 'Doe', 'Foo', 'Bar'];
-const findUserById = (array, id) => { array.find((id) => id = 'Foo'); }
-console.log(findUserById(id))
+const array4 = [
+  {id: 1, name: 'John'},
+  {id: 2, name: 'Doe'},
+  {id: 3, name: 'Foo'},
+  {id: 4, name: 'Bar'},
+];
+const findUserById = (array, id) => array.find(i => i.id === id)?.name ?? null;
+console.log(findUserById(array4, 3))
+//console.log(findUserById(array4, 5))
 
 
 module.exports = {multiplyByTwo, filterNameStartByA, sum, findUserById};
